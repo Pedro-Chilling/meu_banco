@@ -34,6 +34,7 @@ $musicas = listarMusica();
         }
 
         form {
+            width: 65%;
             background: white;
             padding: 25px;
             border-radius: 15px;
