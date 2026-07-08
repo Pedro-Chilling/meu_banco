@@ -16,7 +16,7 @@ $musicas = listarMusica();
     <title>Musicas</title>
 
     <style>
-                * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -94,7 +94,7 @@ $musicas = listarMusica();
         }
 
         table {
-            width: 100%;
+            width: 65%;
             background: white;
             border-collapse: collapse;
             overflow: hidden;
@@ -107,6 +107,7 @@ $musicas = listarMusica();
         thead {
             background: #2f4858;
             color: white;
+            text-align: left;
         }
 
         th {
@@ -117,6 +118,7 @@ $musicas = listarMusica();
         }
 
         td {
+            align-items: center;
             padding: 15px;
         }
 
