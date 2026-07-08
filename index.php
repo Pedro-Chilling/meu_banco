@@ -16,9 +16,36 @@ $musicas = listarMusica();
     <title>Musicas</title>
 
     <style>
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f3ee;
+            font-family: "Segoe UI", sans-serif;
+            color: #2c2c2c;
+            padding: 40px;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
         form {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
             display: flex;
-            gap: 15px;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: end;
+
+            border-top: 5px solid #b8860b;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, .08);
 
             margin-bottom: 30px;
         }
@@ -28,43 +55,120 @@ $musicas = listarMusica();
             flex-direction: column;
         }
 
-        input {
-            padding: 10px 15px;
-            border-radius: 5px;
-            border: 1px solid #000;
+        label {
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #2f4858;
         }
 
+        input,
         select {
-            padding: 10px 15px;
-            border-radius: 5px;
-            border: 1px solid #000;
+            width: 190px;
+            padding: 12px;
+            border: 1px solid #d6d6d6;
+            border-radius: 8px;
+            outline: none;
+            transition: .3s;
         }
 
-        [type="submit"] {
-            text-transform: uppercase;
+        input:focus,
+        select:focus {
+            border-color: #b8860b;
+            box-shadow: 0 0 8px rgba(184, 134, 11, .2);
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #2f4858;
+            color: white;
             cursor: pointer;
+            font-weight: bold;
+            transition: .3s;
         }
 
+        button:hover {
+            background: #1f3441;
+            transform: translateY(-2px);
+        }
 
         table {
+            width: 100%;
+            background: white;
             border-collapse: collapse;
-            width: 60%;
+            overflow: hidden;
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, .08);
         }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
+        thead {
+            background: #2f4858;
+            color: white;
         }
 
         th {
-            background-color: #f2f2f2;
-            text-align: left;
+            padding: 16px;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        td {
+            padding: 15px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #ececec;
+            transition: .2s;
+        }
+
+        tbody tr:hover {
+            background: #faf8f2;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        td a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        td a:first-child {
+            color: #1d4ed8;
+        }
+
+        td a:last-child {
+            color: #dc2626;
+        }
+
+        td a:hover {
+            opacity: .7;
+        }
+
+        .titulo {
+            margin-bottom: 25px;
+            color: #2f4858;
+            font-size: 32px;
+        }
+
+        .subtitulo {
+            color: #777;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 
 <body>
+
+    <h1 class="titulo">🎵 Repertório de Louvor</h1>
+    <p class="subtitulo">
+        Gerenciamento de músicas do ministério
+    </p>
 
 
     <form method="post" action="acoes/cadastrar_musica.php">
