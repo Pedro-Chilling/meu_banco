@@ -34,7 +34,7 @@ $musicas = listarMusica();
         }
 
         form {
-            width: 65%;
+            width: 90%;
             background: white;
             padding: 25px;
             border-radius: 15px;
@@ -95,7 +95,7 @@ $musicas = listarMusica();
         }
 
         table {
-            width: 65%;
+            width: 90%;
             background: white;
             border-collapse: collapse;
             overflow: hidden;
@@ -168,13 +168,13 @@ $musicas = listarMusica();
 
 <body>
 
-    <h1 class="titulo">🎵 Repertório de Louvor</h1>
+    <h1 class="titulo">🎵 Músicas</h1>
     <p class="subtitulo">
         Gerenciamento de músicas do ministério
     </p>
 
 
-    <form method="post" action="acoes/cadastrar_musica.php">
+    <form method="post" action="musicas/cadastrar_musica.php">
         <div>
             <label for="nome">Nome da musica</label>
             <input id="nome" name="nome" type="text" placeholder="Nome da musica" required>
@@ -237,13 +237,13 @@ $musicas = listarMusica();
                     <td><?= $musica['autor']; ?></td>
                     <td><?= $musica['compasso']; ?></td>
                     <td>
-                        <a href="./acoes/editar.php?musica=<?= $musica['id'] ?>">Editar</a> |
-                        <a href="./acoes/excluir_musica.php?musica=<?=$musica['id']?>">Excluir</a>                   
+                        <a href="./edicao.php?musica=<?= $musica['id'] ?>">Editar</a> |
+                        <a href="./musicas/excluir_musica.php?musica=<?= $musica['id'] ?>">Excluir</a>                   
                     </td>
                 </tr>
             <?php
             }
-            ?>
+            ?>  
         </tbody>
     </table>
 
