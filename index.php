@@ -15,6 +15,8 @@ $musicas = listarMusica();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musicas</title>
 
+    <link rel="icon" type="image/png" href="logo.site.png">
+
     <style>
         * {
             margin: 0;
@@ -168,7 +170,7 @@ $musicas = listarMusica();
 
 <body>
 
-    <h1 class="titulo">🎵 Músicas</h1>
+    <h1 class="titulo">🎵 Cadastrar Músicas</h1>
     <p class="subtitulo">
         Gerenciamento de músicas do ministério
     </p>

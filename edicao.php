@@ -135,7 +135,7 @@ $musica = listarUmaMusica($_GET['musica']);
         </a>
       </div>
 
-      <form method="post" action="editar_musica.php">
+      <form method="post" action="musicas/editar_musica.php">
 
         <input type="hidden" name="id" value="<?= $musica['id'] ?>">
 
