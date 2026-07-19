@@ -9,8 +9,11 @@ function cadastrarMusica($dados){
     $bps = $dados['bps'];
     $autor = $dados['autor'];
     $compasso = $dados['compasso'];
+    $yt = $dados['yt'];
+    $cifra = $dados['cifra'];
+    $letras = $dados['letras'];
 
-    $SQL = "INSERT INTO musicas (nome, tom, bps, autor, compasso) VALUES ('$nome','$tom','$bps','$autor', '$compasso')";
+    $SQL = "INSERT INTO musicas (nome, tom, bps, autor, compasso, yt, cifra, letras) VALUES ('$nome','$tom','$bps','$autor', '$compasso', '$yt', '$cifra', '$letras')";
 
     return executarQuery($SQL);
 }
@@ -39,9 +42,11 @@ function atualizarMusica($dados, $id){
     $bps = $dados['bps'];
     $autor = $dados['autor'];
     $compasso = $dados['compasso'];
+    $yt = $dados['yt'];
+    $cifra = $dados['cifra'];
+    $letras = $dados['letras'];
 
-
-    $SQL = "UPDATE musicas SET nome ='$nome', tom ='$tom', bps = '$bps', autor ='$autor', compasso = '$compasso' WHERE id = $id";
+    $SQL = "UPDATE musicas SET nome ='$nome', tom ='$tom', bps = '$bps', autor ='$autor', compasso = '$compasso', yt = '$yt', cifra = '$cifra', letras = '$letras'   WHERE id = $id";
 
     return executarQuery($SQL);
 }
