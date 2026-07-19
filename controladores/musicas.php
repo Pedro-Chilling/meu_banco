@@ -11,9 +11,9 @@ function cadastrarMusica($dados){
     $compasso = $dados['compasso'];
     $yt = $dados['yt'];
     $cifra = $dados['cifra'];
-    $letras = $dados['letras'];
+    $letra = $dados['letra'];
 
-    $SQL = "INSERT INTO musicas (nome, tom, bps, autor, compasso, yt, cifra, letras) VALUES ('$nome','$tom','$bps','$autor', '$compasso', '$yt', '$cifra', '$letras')";
+    $SQL = "INSERT INTO musicas (nome, tom, bps, autor, compasso, yt, cifra, letra) VALUES ('$nome','$tom','$bps','$autor', '$compasso', '$yt', '$cifra', '$letra')";
 
     return executarQuery($SQL);
 }

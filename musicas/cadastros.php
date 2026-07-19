@@ -176,7 +176,7 @@ $musicas = listarMusica();
     </p>
 
 
-    <form method="post" action="musicas/cadastrar_musica.php">
+    <form method="post" action="./cadastrar_musica.php">
         <div>
             <label for="nome">Nome da musica</label>
             <input id="nome" name="nome" type="text" placeholder="Nome da musica" required>
