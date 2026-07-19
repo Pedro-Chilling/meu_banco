@@ -13,6 +13,8 @@ $musica = listarUmaMusica($_GET['musica']);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Editar Musica</title>
 
+  <link rel="icon" type="image/png" href="logo.site.png">
+
   <style>
     body {
       background: #f5f3ee;

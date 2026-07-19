@@ -240,7 +240,8 @@ $musicas = listarMusica();
                     <td><?= $musica['compasso']; ?></td>
                     <td>
                         <a href="./edicao.php?musica=<?= $musica['id'] ?>">Editar</a> |
-                        <a href="./musicas/excluir_musica.php?musica=<?= $musica['id'] ?>">Excluir</a>                   
+                        <a href="./musicas/excluir_musica.php?musica=<?= $musica['id'] ?>">Excluir</a> |                  
+                        <a href="./detalhes.php?musica=<?= $musica['id'] ?>">Detalhes</a>                   
                     </td>
                 </tr>
             <?php
