@@ -204,7 +204,7 @@ $musica = listarUmaMusica($_GET['musica']);
           Informações da música selecionada.
         </p>
 
-        <a class="voltar" href="index.php">
+        <a class="voltar" href="listaMusicas.php">
           ← Voltar para repertório
         </a>
       </div>

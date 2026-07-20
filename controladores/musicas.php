@@ -44,16 +44,16 @@ function atualizarMusica($dados, $id){
     $compasso = $dados['compasso'];
     $yt = $dados['yt'];
     $cifra = $dados['cifra'];
-    $letras = $dados['letras'];
+    $letra = $dados['letra'];
 
-    $SQL = "UPDATE musicas SET nome ='$nome', tom ='$tom', bps = '$bps', autor ='$autor', compasso = '$compasso', yt = '$yt', cifra = '$cifra', letras = '$letras'   WHERE id = $id";
+    $SQL = "UPDATE musicas SET nome ='$nome', tom ='$tom', bps = '$bps', autor ='$autor', compasso = '$compasso', yt = '$yt', cifra = '$cifra', letra = '$letra'   WHERE id = $id";
 
     return executarQuery($SQL);
 }
 
 // <!-- D = (DELETE) DELETAR Musicas   -->
 function deletarMusica($id){
-    $SQL = "DELETE FROM musicas WHERE id = $id";
+    $SQL = "DELETE FROM musicas WHERE id = $id";    
 
     return executarQuery($SQL);
 }

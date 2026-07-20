@@ -170,20 +170,59 @@ $musicas = listarMusica();
 
 <body>
 
-    <h1 class="titulo">Gerenciador de Repertorio</h1>
+
+    <h1 class="titulo">Lista de musicas</h1>
     <p class="subtitulo">
-        <a class="voltar" href="listaMusicas.php">
-          ← Lista de Musicas
-        </a>
+        Musicas Cadastradas
     </p>
 
-    <p class="subtitulo">
-        <a class="voltar" href="cadastros.php">
-            ← Cadastre uma musica
-        </a>
-    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Tom</th>
+                <th>BPS</th>
+                <th>Autor</th>
+                <th>Compasso</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            foreach ($musicas as $musica) {
+            ?>
+                <tr>
+                    <td><?= $musica['id']; ?></td>
+                    <td><?= $musica['nome']; ?></td>
+                    <td><?= $musica['tom']; ?></td>
+                    <td><?= $musica['bps']; ?></td>
+                    <td><?= $musica['autor']; ?></td>
+                    <td><?= $musica['compasso']; ?></td>
+                    <td>
+                        <a href="./edicao.php?musica=<?= $musica['id'] ?>">Editar</a> |
+                        <a href="./musicas/excluir_musica.php?musica=<?= $musica['id'] ?>">Excluir</a> |
+                        <a href="./detalhes.php?musica=<?= $musica['id'] ?>">Detalhes</a>
+                    </td>
+                </tr>
+            <?php
+            }
+            ?>
+        </tbody>
+    </table>
 
-   
+        <div>
+            <a class="voltar" href="./cadastros.php">
+                ← Cadastrar nova música
+            </a>
+        </div>
+        <div>
+            <a class="voltar" href="./index.php">
+                ← Pagina inicial
+            </a>
+        </div>
+
+
 </body>
 
 </html>

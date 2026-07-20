@@ -10,4 +10,4 @@ unset($dados['id']);
 
 $atualizou = atualizarMusica($dados, $id);
 
-header('Location: http://localhost/php/meu_banco/');
+header('Location: http://localhost/php/GestaoMusicas/listaMusicas.php');

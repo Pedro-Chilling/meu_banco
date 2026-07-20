@@ -132,7 +132,7 @@ $musica = listarUmaMusica($_GET['musica']);
           Atualize as informações da música selecionada.
         </p>
 
-        <a class="voltar" href="index.php">
+        <a class="voltar" href="listaMusicas.php">
           ← Voltar para repertório
         </a>
       </div>
@@ -177,6 +177,26 @@ $musica = listarUmaMusica($_GET['musica']);
             <option value="8/8" <?= $musica['compasso'] === '8/8' ? 'selected' : '' ?>>8/8</option>
           </select>
         </div>
+
+
+        <div>
+          <label for="yt">Youtube</label>
+          <input type="link" name="Youtube"
+            value="<?= $musica['yt'] ?>" required>
+        </div>
+
+        <div>
+          <label for="cifra">Cifra</label>
+         <input type="link" name="Cifra"
+            value="<?= $musica['cifra'] ?>" required>
+        </div>
+
+        <div>
+          <label for="letras">Letras</label>
+          <input type="link" name="letra"
+            value="<?= $musica['letra'] ?>" required>
+        </div>
+
 
         <div class="botao-area">
           <button type="submit">
